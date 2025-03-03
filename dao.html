@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecViva - DAO Governance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* DAO page specific styles with improved red theme */
+        :root {
+            --primary-color: #ff5555;
+            --bg-color: #330000;  /* Lightened background */
+            --terminal-bg: #1a0000;  /* Lightened terminal background */
+            --text-shadow: 0 0 5px #ff5555;
+            --text-color: #ffffff;  /* Bright text for contrast */
+            --highlight-color: #ff8080; /* Slightly different red for highlights */
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .dao-info {
+            border: 1px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(51, 0, 0, 0.7);  /* Semi-transparent overlay */
+        }
+
+        .dao-section {
+            margin-bottom: 30px;
+        }
+
+        .dao-section h2, .dao-section h3 {
+            color: var(--highlight-color);
+            text-shadow: var(--text-shadow);
+        }
+
+        .dao-section h3 {
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .vote-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .vote-type {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 85, 85, 0.15);
+            padding: 15px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .vote-type h4 {
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+        }
+
+        .rules-list {
+            list-style-position: inside;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .rules-list li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .formatted-steps {
+            background: var(--terminal-bg);
+            border: 1px solid var(--primary-color);
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .formatted-steps ol {
+            padding-left: 25px;
+        }
+
+        .formatted-steps li {
+            margin-bottom: 10px;
+        }
+
+        /* Terminal effect specific to DAO page */
+        .dao-terminal {
+            background: var(--terminal-bg);
+            border: 2px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        /* Improved contrast for the terminal window */
+        .terminal-window {
+            background: var(--terminal-bg);
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        
+        /* Enhance active navigation item */
+        nav a.active {
+            background-color: rgba(255, 85, 85, 0.3);
+            border-color: var(--highlight-color);
+        }
+        
+        /* Ensure scanlines are visible but not overpowering */
+        body::before {
+            opacity: 0.7;
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        blockquote {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    <div class="container">
+        <header>
+            <h1 class="logo">TecViva</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="blockchain.html">BLOCKCHAIN</a></li>
+                    <li><a href="dao.html" class="active">DAO</a></li>
+                    <li><a href="#ai">AI SOLUTIONS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="dao">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    > DAO Status: Operational
+                </div>
+                <div class="terminal-content">
+                    <p>> Welcome to TecViva DAO Governance Hub</p>
+                    <p>> Current voting proposals: 3</p>
+                    <p>> Active governance participants: 127</p>
+                    <p>> Ready for governance operations <span class="blinking-cursor">_</span></p>
+                </div>
+            </div>
+
+            <div class="dao-info">
+                <div class="dao-section">
+                    <h2>Voting on the TEC Viva DAO</h2>
+                    <div class="dao-terminal">
+                        <ul class="rules-list">
+                            <li><span class="highlight">1 $TEC = 1 voting power</span></li>
+                            <li>In order to vote, users require a voting power of <span class="highlight">600 $TEC</span></li>
+                            <li>Submitting proposals require a voting power of <span class="highlight">3000 $TEC</span></li>
+                            <li>Proposals submitted by the TEC Viva DAO, are only eligible for $TEC distributions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dao-section">
+                    <h3>DAO Dashboard</h3>
+                    <p>The TEC VIva Dao dashboard can be accessed at this address: <span class="highlight">TBA</span></p>
+                </div>
+
+                <div class="dao-section">
+                    <h3>Submitting Proposals</h3>
+                    <p>If you wish to gain protocol or community support for your proposal, you may submit a draft within the Telegram governance channel. The submission of proposals require a voting power of <span class="highlight">3000 $TEC</span>. These votes are non-binding. If quorum and support is achieved, the proposal will be automatically upgraded to a TEC Viva DAO proposal and resubmitted for voting with distributions.</p>
+                    
+                    <div class="formatted-steps">
+                        <h4>Please adhere to the following format:</h4>
+                        <ol>
+                            <li>Link to the Telegram thread discussion.</li>
+                            <li>Summary (rationale, timeline, goals, risks, effects)</li>
+                            <li>End time of a proposal should not be longer than 30 days from its starting time.</li>
+                        </ol>
+                        <blockquote>Proposals that do not comply to this format will be removed.</blockquote>
+                    </div>
+                </div>
+
+                <div class="dao-section">
+                    <h3>DAO Votes</h3>
+                    <p>There are three types of votes:</p>
+                    
+                    <div class="vote-types">
+                        <div class="vote-type">
+                            <h4>Parameter Votes</h4>
+                            <p>Can modify pool parameters.</p>
+                            <p>Require: <span class="highlight">10% quorum</span> with <span class="highlight">40% support</span>.</p>
+                        </div>
+                        
+                        <div class="vote-type">
+                            <h4>Protocol Votes</h4>
+                            <p>Can control most functionality within the protocol.</p>
+                            <p>Require: <span class="highlight">15% quorum</span> with <span class="highlight">51% support</span>.</p>
+                        </div>
+                        
+                        <div class="vote-type">
+                            <h4>DAO Votes</h4>
+                            <p>Can control the release of additional circulating supply from the reserve, new protocol liquidity pools, and special interest DAO fund distributions.</p>
+                            <p>Require: <span class="highlight">20% quorum</span> with <span class="highlight">60% support</span>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dao-terminal">
+                        <p>Quorum = total voting power of the circulating supply</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 TecViva | DAO Governance</p>
+            <p class="blinking-cursor">></p>
+        </footer>
+    </div>
+</body>
+</html>
