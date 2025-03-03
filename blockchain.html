@@ -6,22 +6,34 @@
     <title>TecViva - Blockchain Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Blockchain page specific styles with blue theme */
+        /* Blockchain page specific styles with improved blue theme */
         :root {
             --primary-color: #00ccff;
-            --bg-color: #000033;
-            --terminal-bg: #000022;
+            --bg-color: #001a4d;  /* Lightened from #000033 */
+            --terminal-bg: #00102b;  /* Lightened from #000022 */
             --text-shadow: 0 0 5px #00ccff;
+            --text-color: #ffffff;  /* Brighter text for better contrast */
+            --highlight-color: #4db8ff; /* Slightly different blue for highlights */
+        }
+
+        body {
+            color: var(--text-color);
         }
 
         .token-info {
             border: 1px solid var(--primary-color);
             padding: 20px;
             margin: 20px 0;
+            background-color: rgba(0, 26, 77, 0.7);  /* Semi-transparent overlay for better contrast */
         }
 
         .token-section {
             margin-bottom: 30px;
+        }
+
+        .token-section h2, .token-section h3 {
+            color: var(--highlight-color);
+            text-shadow: var(--text-shadow);
         }
 
         .token-section h3 {
@@ -32,10 +44,12 @@
 
         .contract-address {
             font-family: 'Courier New', monospace;
-            background-color: rgba(0, 204, 255, 0.1);
+            background-color: rgba(0, 204, 255, 0.2);  /* More visible background */
             padding: 5px;
             border-radius: 3px;
             word-break: break-all;
+            color: #ffffff;  /* Ensuring white text for addresses */
+            font-weight: bold;  /* Making addresses stand out */
         }
 
         .distribution-chart {
@@ -48,13 +62,14 @@
         .distribution-item {
             flex: 1;
             min-width: 200px;
-            background: rgba(0, 204, 255, 0.1);
+            background: rgba(0, 204, 255, 0.15);  /* Slightly more visible background */
             padding: 15px;
             border: 1px solid var(--primary-color);
         }
 
         .distribution-item h4 {
             margin-bottom: 10px;
+            color: var(--highlight-color);
         }
 
         .utility-list {
@@ -64,11 +79,13 @@
 
         .utility-list li {
             margin-bottom: 10px;
+            line-height: 1.5;  /* Better line spacing for readability */
         }
 
         .social-link {
-            color: var(--primary-color);
+            color: var(--highlight-color);
             text-decoration: underline;
+            font-weight: bold;
         }
 
         /* Terminal effect specific to blockchain page */
@@ -80,6 +97,23 @@
             box-shadow: 0 0 10px var(--primary-color);
             overflow: auto;
         }
+        
+        /* Improved contrast for the terminal window */
+        .terminal-window {
+            background: var(--terminal-bg);
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        
+        /* Enhance active navigation item */
+        nav a.active {
+            background-color: rgba(0, 204, 255, 0.3);
+            border-color: var(--highlight-color);
+        }
+        
+        /* Ensure scanlines are visible but not overpowering */
+        body::before {
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -89,8 +123,8 @@
             <h1 class="logo">TecViva</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html#home">HOME</a></li>
-                    <li><a href="#blockchain" class="active">BLOCKCHAIN</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="blockchain.html" class="active">BLOCKCHAIN</a></li>
                     <li><a href="#ai">AI SOLUTIONS</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
