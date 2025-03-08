@@ -48,9 +48,29 @@
                     margin-bottom: 10px;
                 }
             }  
+            
+            /* Social media icons */
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            
+            .social-icons a {
+                color: var(--primary-color);
+                font-size: 24px;
+                transition: all 0.3s ease;
+            }
+            
+            .social-icons a:hover {
+                opacity: 0.8;
+                transform: translateY(-3px);
+            }
      
     </style>
-
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="wallet-connection">
@@ -71,7 +91,6 @@
                 </ul>
             </nav>
         </header>
-
         <main>
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -84,7 +103,6 @@
                     <p>> Ready for innovation <span class="blinking-cursor">_</span></p>
                 </div>
             </div>
-
             <div class="grid">
                 <div class="card">
                     <h2>DAO</h2>
@@ -100,9 +118,13 @@
                 </div>
             </div>
         </main>
-
         <footer>
             <p>&copy; 2025 TecViva | Innovating for Tomorrow</p>
+            <div class="social-icons">
+                <a href="https://linktr.ee/tecviva" target="_blank" title="TecViva Linktree">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
             <p class="blinking-cursor">></p>
         </footer>
     </div>
