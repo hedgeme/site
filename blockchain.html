@@ -15,33 +15,27 @@
             --text-color: #ffffff;  /* Brighter text for better contrast */
             --highlight-color: #4db8ff; /* Slightly different blue for highlights */
         }
-
         body {
             color: var(--text-color);
         }
-
         .token-info {
             border: 1px solid var(--primary-color);
             padding: 20px;
             margin: 20px 0;
             background-color: rgba(0, 26, 77, 0.7);  /* Semi-transparent overlay for better contrast */
         }
-
         .token-section {
             margin-bottom: 30px;
         }
-
         .token-section h2, .token-section h3 {
             color: var(--highlight-color);
             text-shadow: var(--text-shadow);
         }
-
         .token-section h3 {
             border-bottom: 1px solid var(--primary-color);
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
-
         .contract-address {
             font-family: 'Courier New', monospace;
             background-color: rgba(0, 204, 255, 0.2);  /* More visible background */
@@ -51,14 +45,12 @@
             color: #ffffff;  /* Ensuring white text for addresses */
             font-weight: bold;  /* Making addresses stand out */
         }
-
         .distribution-chart {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin: 20px 0;
         }
-
         .distribution-item {
             flex: 1;
             min-width: 200px;
@@ -66,28 +58,23 @@
             padding: 15px;
             border: 1px solid var(--primary-color);
         }
-
         .distribution-item h4 {
             margin-bottom: 10px;
             color: var(--highlight-color);
         }
-
         .utility-list {
             list-style-position: inside;
             padding-left: 20px;
         }
-
         .utility-list li {
             margin-bottom: 10px;
             line-height: 1.5;  /* Better line spacing for readability */
         }
-
         .social-link {
             color: var(--highlight-color);
             text-decoration: underline;
             font-weight: bold;
         }
-
         /* Terminal effect specific to blockchain page */
         .blockchain-terminal {
             background: var(--terminal-bg);
@@ -124,7 +111,6 @@
             right: 20px;
             z-index: 1000;
         }
-
         #connect-wallet {
             background-color: var(--primary-color);
             color: var(--bg-color);
@@ -133,21 +119,17 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
         #connect-wallet:hover {
             opacity: 0.8;
         }
-
         #connect-wallet:disabled {
             cursor: not-allowed;
             opacity: 0.6;
         }
-
         #account-display {
             color: var(--primary-color);
             font-family: 'Courier New', monospace;
         }
-
         @media (max-width: 768px) {
             .wallet-connection {
                 position: static;
@@ -155,7 +137,40 @@
                 margin-bottom: 10px;
             }
         }
+        
+        /* Social media icons */
+        .social-section {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .social-section h3 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--highlight-color);
+            text-shadow: var(--text-shadow);
+            border-bottom: none;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+        }
     </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="wallet-connection">
@@ -176,7 +191,6 @@
                 </ul>
             </nav>
         </header>
-
         <main id="blockchain">
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -189,14 +203,12 @@
                     <p>> Ready for blockchain operations <span class="blinking-cursor">_</span></p>
                 </div>
             </div>
-
             <div class="token-info">
                 <div class="token-section">
                     <h2>$TEC Token</h2>
                     <p>On 1/21/2024, $TEC officially launched on the Harmony Protocol Blockchain. The main purpose of the $TEC token is to build a sustainable financial ecosystem that offers incentives to the DAO, liquidity providers, and ecosystem contributors. Furthermore, the DAO allows token holders to be involved in the governance of the protocol.</p>
                     <p>Follow our socials: <a href="https://linktr.ee/tecviva" class="social-link" target="_blank">https://linktr.ee/tecviva</a></p>
                 </div>
-
                 <div class="token-section">
                     <h3>SUPPLY AND DISTRIBUTIONS</h3>
                     <div class="blockchain-terminal">
@@ -221,7 +233,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="token-section">
                     <h3>CONTRACT ADDRESSES</h3>
                     <div class="blockchain-terminal">
@@ -234,7 +245,6 @@
                         <p>TEC Treasury Reserve : <span class="contract-address">0x95fCbB05007b1a0eD8344282ADAB335b9F765f4A</span> (Harmony)</p>
                     </div>
                 </div>
-
                 <div class="token-section">
                     <h3>What is the utility of $TEC?</h3>
                     <ul class="utility-list">
@@ -246,7 +256,6 @@
                 </div>
             </div>
         </main>
-
         <footer>
             <p>&copy; 2025 TecViva | Blockchain Innovation</p>
             <div class="social-section">
