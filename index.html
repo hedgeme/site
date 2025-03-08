@@ -6,10 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecViva - Blockchain & AI Innovation</title>
     <style>
+                    /* started wallet connection */
+            
+                    .wallet-connection {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
+    
+            #connect-wallet {
+                background-color: var(--primary-color);
+                color: var(--bg-color);
+                border: none;
+                padding: 8px 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+    
+            #connect-wallet:hover {
+                opacity: 0.8;
+            }
+    
+            #connect-wallet:disabled {
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+    
+            #account-display {
+                color: var(--primary-color);
+                font-family: 'Courier New', monospace;
+            }
+    
+            @media (max-width: 768px) {
+                .wallet-connection {
+                    position: static;
+                    justify-content: center;
+                    margin-bottom: 10px;
+                }
+            }  
      
     </style>
+
 </head>
 <body>
+    <div class="wallet-connection">
+        <button id="connect-wallet">Connect Wallet</button>
+        <span id="account-display"></span>
+    </div>
     <div class="matrix-bg"></div>
     <div class="container">
         <header>
@@ -59,5 +106,6 @@
             <p class="blinking-cursor">></p>
         </footer>
     </div>
+    <script src="metamask-connection.js"></script>
 </body>
 </html>
